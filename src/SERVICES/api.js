@@ -2,7 +2,9 @@ import axios from 'axios'
 // ✅ CORRECT - Use backend URL
 const api = axios.create({
     // baseURL: 'http://localhost:5014/api/v1',  // ← CORRECT!
-    baseURL: 'https://priceflow-backend.onrender.com/api/v1',
+    // baseURL: 'https://priceflow-backend.onrender.com/api/v1',
+     baseURL: import.meta.env.VITE_BACKEND_URL || 'http://localhost:5014/api/v1',
+
     withCredentials: true,
     headers: {
         'Content-Type': 'application/json'
