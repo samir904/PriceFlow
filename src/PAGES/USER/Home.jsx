@@ -33,7 +33,7 @@ const Home = () => {
 
     useEffect(() => {
         dispatch(getProducts());
-        dispatch(getTopProducts(10));
+        // dispatch(getTopProducts(10));
         dispatch(getActiveDiscounts());
         dispatch(getCategories());
     }, [dispatch]);
